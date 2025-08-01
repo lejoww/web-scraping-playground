@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Scrapeando ando! 🕷️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      padding: 2rem;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .joke, .fact, .emoji, .secret {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .joke { background-color: #e0f7fa; }
+    .fact { background-color: #fff3e0; }
+    .emoji { background-color: #ede7f6; font-size: 1.5rem; }
+    .hidden { display: none; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #bbb;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¡Bienvenido al sitio de pruebas de scraping! 🧪</h1>
+    <div>
+      <img src="./ib_logo.png" class="logo" width="300"/>
+    </div>
+  </header>
+
+  <h2>🃏 Chistes del día</h2>
+  <div class="joke">¿Por qué los programadores odian la naturaleza? ¡Porque tiene demasiados bugs!</div>
+  <div class="joke">¿Cuántos programadores se necesitan para cambiar una bombilla? Ninguno, ¡eso es un problema de hardware!</div>
+
+  <h2>🤓 Datos curiosos</h2>
+  <div class="fact" data-source="datos_ciencia">La miel nunca se vence. Ha sido encontrada en tumbas egipcias ¡aún comestible!</div>
+  <div class="fact" data-source="datos_tiempo">Un año en Venus dura menos que un día en Venus.</div>
+
+  <h2>🥰 Emojis favoritos de los usuarios</h2>
+  <div class="emoji" id="emoji-1">😂</div>
+  <div class="emoji" id="emoji-2">🐍</div>
+  <div class="emoji" id="emoji-3">💻</div>
+
+  <h2>📊 Ranking de lenguajes 2025</h2>
+  <table id="tabla-lenguajes">
+    <thead>
+      <tr><th>Lenguaje</th><th>Puntaje</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Python</td><td>99.1</td></tr>
+      <tr><td>JavaScript</td><td>88.7</td></tr>
+      <tr><td>Go</td><td>76.5</td></tr>
+      <tr><td>Rust</td><td>73.2</td></tr>
+    </tbody>
+  </table>
+
+  <div class="secret hidden" id="secreto-oculto">¡Felicitaciones por encontrarme! 🕵️‍♂️</div>
+</body>
+</html>

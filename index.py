@@ -1,3 +1,4 @@
+import random
 from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
@@ -25,6 +26,11 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+
+@app.route('/random')
+def random_number():
+    number = random.randint(0, 10)
+    return render_template('random.html', number=number)
 
 if __name__ == '__main__':
     app.run(debug=True)

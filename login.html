@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión</title>
+  <style>
+    .error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <input type="submit" value="Iniciar sesión">
+    <div class="error" id="errorMsg">Usuario o contraseña incorrectos</div>
+  </form>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("errorMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // Evita el envío por defecto
+
+      const username = form.username.value.trim();
+      const password = form.password.value;
+
+      if (username === "alejo" && password === "12345") {
+        window.location.href = "dashboard.html"; // Redirige
+      } else {
+        errorMsg.style.display = "block"; // Muestra error
+      }
+    });
+  </script>
+</body>
+</html>

@@ -13,7 +13,7 @@
 </head>
 <body>
   <h1>Login</h1>
-  <form id="loginForm">
+  <form id="loginForm" method="post" action="dashboard.html">
     <label for="username">Usuario:</label>
     <input type="text" id="username" name="username"><br><br>
 
@@ -23,23 +23,5 @@
     <input type="submit" value="Iniciar sesión">
     <div class="error" id="errorMsg">Usuario o contraseña incorrectos</div>
   </form>
-
-  <script>
-    const form = document.getElementById("loginForm");
-    const errorMsg = document.getElementById("errorMsg");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault(); // Evita el envío por defecto
-
-      const username = form.username.value.trim();
-      const password = form.password.value;
-
-      if (username === "alejo" && password === "12345") {
-        window.location.href = "dashboard.html"; // Redirige
-      } else {
-        errorMsg.style.display = "block"; // Muestra error
-      }
-    });
-  </script>
 </body>
 </html>

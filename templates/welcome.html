@@ -1,52 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>¡Scrapeando ando! 🕷️</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-      padding: 2rem;
-    }
-    header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .joke, .fact, .emoji, .secret {
-      margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .joke { background-color: #e0f7fa; }
-    .fact { background-color: #fff3e0; }
-    .emoji { background-color: #ede7f6; font-size: 1.5rem; }
-    .hidden { display: none; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
-    }
-    table, th, td {
-      border: 1px solid #bbb;
-    }
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Bienvenido{% endblock %}
+{% block content %}
   <header>
     <h1>¡Bienvenido al sitio de pruebas de scraping! 🧪</h1>
     <div>
-      <img src="./ib_logo.png" class="logo" width="300"/>
+      <img src="{{ url_for('static', filename='ib_logo.png') }}" class="logo" width="300"/>
     </div>
   </header>
-
+  <a href="{{ url_for('login') }}" class="btn btn-primary">Ir al Login</a>
+  <br/>
+  <br/>
   <h2>🃏 Chistes del día</h2>
   <div class="joke">¿Por qué los programadores odian la naturaleza? ¡Porque tiene demasiados bugs!</div>
   <div class="joke">¿Cuántos programadores se necesitan para cambiar una bombilla? Ninguno, ¡eso es un problema de hardware!</div>
@@ -72,7 +35,6 @@
       <tr><td>Rust</td><td>73.2</td></tr>
     </tbody>
   </table>
-
-  <div class="secret hidden" id="secreto-oculto">¡Felicitaciones por encontrarme! 🕵️‍♂️</div>
-</body>
-</html>
+  <br/>
+  <br/>
+{% endblock %}

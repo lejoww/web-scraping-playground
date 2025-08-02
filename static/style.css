@@ -1,0 +1,40 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.joke, .fact, .emoji, .secret {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.joke { background-color: #e0f7fa; }
+.fact { background-color: #fff3e0; }
+.emoji { background-color: #ede7f6; font-size: 1.5rem; }
+.hidden { display: none; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+table, th, td {
+  border: 1px solid #bbb;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
